@@ -1,3 +1,19 @@
+const navLinks = document.querySelectorAll('header nav a')
+const activePage = ()  =>{
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    })
+}
+navLinks.forEach((link, idx) =>{
+    link.addEventListener('click', () =>{
+        if(!link.classList.contains('active')) {
+            activePage();
+
+            link.classList.add('active');
+        }
+    })
+})
+
 const resumeBtns = document.querySelectorAll('.resume_btn');
 
 resumeBtns.forEach((btn, idx) => {
